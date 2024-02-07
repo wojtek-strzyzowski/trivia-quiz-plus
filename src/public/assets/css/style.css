@@ -1,0 +1,362 @@
+body {
+    background: black;
+    margin: 0;
+}
+
+.container-fluid {
+    background-image: url('/assets/bilder/logo.png');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    color: rgba(255, 255, 255, 0.161);
+}
+
+
+.form-select, .form-control, .welcome, h1, h2, p {
+    margin: 10px 0;
+    background-color: rgba(47, 102, 150, 0.314);
+    color: whitesmoke;
+    font-size: 25px;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.form-select {
+    width: 400px;
+    margin: 10px 0;
+    align-self: center;
+    text-align: center;
+}
+
+.start-button, .next-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    width: 200px;
+}
+
+.schluss {
+    font-size: x-large;
+}
+
+.footer {
+    color: whitesmoke;
+}
+
+.row-5 {
+    color: whitesmoke;
+    font-size: xx-large;
+    padding-top: 50px;
+}
+
+
+/* Question-Seite folgt*/
+
+.versuch {
+    align-items: center;
+    align-self: center;
+   }
+
+.btn-group-vertical{
+    width: 300px;
+}
+
+.btn {
+    color: whitesmoke;
+}
+
+
+
+/* result-Seite*/
+
+.row-7 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin-top: 20%;
+}
+
+.row-8 {
+    margin-bottom: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row-9 {
+    position: absolute;
+    bottom: 15%;
+}
+
+.row-10, .row-11 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(245, 245, 245);
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    animation: glow 2s infinite alternate;; 
+}
+
+h1, h2 {
+    max-width: max-content;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    animation: glow 2s infinite alternate;
+}
+
+.glow-element {
+    max-width: max-content;
+    font-size: 1.5em;
+    font-weight: bold;
+    color:white;
+    position: relative;
+    animation: glow 2s infinite alternate; /* Definiert die Animation mit dem Namen "glow" */
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px rgba(187, 219, 8, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 15px rgba(255, 255, 255, 0.8);
+    }
+    to {
+        text-shadow: 0 0 15px rgba(230, 246, 4, 0.8), 0 0 25px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8);
+    }
+}
+
+
+/* Media Query für kleinere Bildschirme (max-width: 768px) */
+
+@media  (max-width: 1365px) and (orientation: landscape) {
+
+    .container-fluid {
+        background-image: url('/assets/bilder/kleinvert.png');
+    }
+    .row-9 {
+        position: absolute;
+        bottom: 20px;
+        /* margin-top: 20px; Optional: Fügen Sie einen Abstand zwischen "Neues Quiz" und "row-8" hinzu */
+    }
+
+.row-11 {
+    width: 75%;
+}
+
+.btn-group-vertical {
+    width: 100%;
+}
+h1,h2,p, .glow-element {
+    font-size: 60px;
+}
+
+
+}
+
+
+@media  (max-width: 1024px) {
+
+    .container-fluid {
+        background-image: url('/assets/bilder/klein.png');
+    }
+
+.row-11 {
+    width: 75%;
+}
+
+.btn-group-vertical {
+    width: 100%;
+}
+
+.row-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    width: 100%;
+}
+h1,h2,p, .glow-element {
+    font-size: 40px;
+}
+
+.form-select, .form-control, .btn {
+    font-size: 30px;
+}
+}
+
+@media  (max-width: 667px) and (orientation: landscape) {
+    .container-fluid {
+        background-image: url('/assets/bilder/kleinvert.png');
+        width: 100vw;
+        height: 100vh;
+        font-size: 18px;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        /* justify-content: space-around; */
+        flex-direction: column;
+    }
+
+    .glow-element {
+        font-size: 30px;
+    }
+
+    .form-select, .form-control,.form-label, .welcome, h1, h2 {
+        font-size: 18px; /* Reduziere die Schriftgröße für kleinere Bildschirme */
+        align-self: center;
+        text-align: center;
+        width: 200px;
+    }
+
+
+
+    .form-group {
+        bottom: 30%;
+    }
+
+   .btn {
+    position: absolute;
+    bottom: 0;
+    }
+
+
+    .form-select, .form-control {
+        width: 75%; /* Reduziere die Breite des Auswahlmenüs für kleinere Bildschirme */
+        margin-left: 12%;
+    }
+
+    p {
+        font-size: 18px;
+        margin-left: 25px;
+    }
+
+    h1 {
+        margin-top: 25px;
+    }
+
+    /* result-Seite*/
+
+.row-4 {
+    display: flex;
+}
+
+.row-5 {
+    overflow: hidden;
+    display: none;
+    white-space: nowrap;
+}
+
+
+.row-7 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+}
+
+.row-8 {
+    margin-bottom: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.row10,.row-11 {
+    width: 75%;
+    font-size: 18px;
+}
+.btn {
+    font-size: 15px;
+}
+    
+}
+@media  (max-width: 375px) {
+
+    .container-fluid {
+        background-image: url('/assets/bilder/klein.png');
+    }
+
+h1, h2 {
+    /* margin-top: 40%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+p {
+    font-size: 18px;
+}
+.form-select {
+    width: 95%;
+    font-size: 20px;
+}
+
+.row-2 {
+    top: 5%;
+}
+.row10,.row-11 {
+    width: 75%;
+    font-size: 18px;
+}
+
+.btn-group-vertical {
+    width: 100%;
+}
+.result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    margin: 0;
+}
+
+.form-select, .form-control, .btn {
+    font-size: 15px;
+}
+select {
+    text-align: center;
+}
+}
+
+@media  (max-width: 375px) and (orientation: landscape) {
+
+    .container-fluid {
+        background-image: url('/assets/bilder/kleinvert.png');
+    }
+
+
+.row-11 {
+    width: 75%;
+}
+
+
+.btn-group-vertical {
+    width: 100%;
+}
+
+.result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+.btn {
+    font-size: 15px;
+}
+
+}
